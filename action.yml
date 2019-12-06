@@ -1,6 +1,7 @@
-name: "Your name here"
-description: "Provide a description here"
-author: "Your name or organization here"
+name: "Setup Ren'Py environment"
+description: "Set up your GitHub Actions workflow with a specific version of Ren'Py"
+author: "Proudust"
+
 inputs:
   myInput: # change this
     description: "input description here"
