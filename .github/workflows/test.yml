@@ -3,8 +3,9 @@ on:
   pull_request:
   push:
     branches:
-      - "master"
-      - "releases/*"
+      - "*"
+    tags-ignore:
+      - "*"
 
 jobs:
   test:

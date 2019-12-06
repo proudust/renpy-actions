@@ -96,7 +96,7 @@ const wait_1 = __webpack_require__(81);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const ms = core.getInput('renpy-version', { required: true });
+            const ms = core.getInput('milliseconds', { required: true });
             console.log(`Waiting ${ms} milliseconds ...`);
             core.debug(new Date().toTimeString());
             yield wait_1.wait(parseInt(ms, 10));
