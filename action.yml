@@ -3,9 +3,14 @@ description: "Set up your GitHub Actions workflow with a specific version of Ren
 author: "Proudust"
 
 inputs:
-  myInput: # change this
-    description: "input description here"
-    default: "default value if applicable"
+  renpy-version:
+    description: "Version Spec of the version to use.  Examples: 6.99.12.4"
+    required: true
+
+outputs:
+  launcher:
+    description: "Ren'Py SDK launcher project directory"
+
 runs:
   using: "node12"
   main: "dist/index.js"

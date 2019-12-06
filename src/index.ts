@@ -1,16 +1,12 @@
 import * as core from '@actions/core';
-import { wait } from './wait';
+import * as path from 'path';
+import { setupRenPy } from './setup-renpy';
 
 async function run(): Promise<void> {
   try {
-    const ms = core.getInput('milliseconds', { required: true });
-    console.log(`Waiting ${ms} milliseconds ...`);
-
-    core.debug(new Date().toTimeString());
-    await wait(parseInt(ms, 10));
-    core.debug(new Date().toTimeString());
-
-    core.setOutput('time', new Date().toTimeString());
+    const version = core.getInput('renpy-version', { required: true });
+    const installPath = await setupRenPy(version);
+    core.setOutput('launcher', path.join(installPath, 'launcher'));
   } catch (error) {
     core.setFailed(error.message);
   }

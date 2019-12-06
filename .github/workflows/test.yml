@@ -16,6 +16,12 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
-      - uses: ./
+
+      - name: Run Action
+        uses: ./
         with:
-          milliseconds: 1000
+          renpy-version: 6.99.12.4
+
+      - name: Run Ren'Py SDK
+        timeout-minutes: 1
+        run: renpy.sh --help
