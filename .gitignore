@@ -91,3 +91,6 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Visual Studio Code Local History Extension
+.history/
