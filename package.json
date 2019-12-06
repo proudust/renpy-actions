@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "description": "TypeScript template action",
-  "main": "lib/main.js",
+  "main": "src/index.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "ncc build",
     "lint": "eslint --fix **/*.ts",
     "test": "jest"
   },
@@ -28,6 +28,7 @@
     "@types/node": "^12.12.14",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
+    "@zeit/ncc": "^0.20.5",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-jest": "^23.1.1",
